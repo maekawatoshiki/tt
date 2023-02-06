@@ -364,6 +364,10 @@ func (t *typer) start(s string, timeLimit time.Duration, startImmediately bool, 
 							break
 						}
 
+						if idx > 0 && text[idx-1] == ' ' {
+							break
+						}
+
 						idx--
 
 						for idx > 0 && text[idx] == '\n' {
